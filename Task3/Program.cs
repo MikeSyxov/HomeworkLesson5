@@ -8,7 +8,7 @@ double[] GetRandomArray(int length)
     double[] array = new double[length];
     for (int i = 0; i < length; i++)
     {
-        array[i] = new Random().NextDouble() * 100;
+        array[i] = ((double)new Random().Next(1,99)*1.11);
     }
     return array;
 }
@@ -65,4 +65,4 @@ double min = GetMinimum(array);
 System.Console.WriteLine();
 double result = max - min;
 
-System.Console.WriteLine($"Разница между {max:F2} и {min:f2} = {result:f2}");
+System.Console.WriteLine($"Разница между {max:F2} - {min:f2} = {result:f2}");
